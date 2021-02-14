@@ -1,0 +1,29 @@
+{
+  "name": "nuxt-electron-test2",
+  "version": "1.0.0",
+  "author": "msdd",
+  "description": "nuxt electron test",
+  "private": true,
+  "main":"main.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development electron .",
+    "dev:nuxt":"cross-env NODE_ENV=development nuxt",
+    "build": "cross-env NODE_ENV=production nuxt build && electron-builder"
+  },
+  "build":{
+    "appId":"nuxt-electron-test2",
+    "directories":{
+      "output":"build"
+    }
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "nuxt": "^2.14.12"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^11.2.3",
+    "electron-builder": "^22.9.1",
+    "electron-devtools-installer": "^3.1.1"
+  }
+}
